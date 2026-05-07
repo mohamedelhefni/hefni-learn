@@ -116,6 +116,19 @@ export interface ChapterListItem {
   totalPoints: number;
 }
 
+// Chapter nav neighbour (prev/next)
+export interface ChapterNavItem {
+  id: string;
+  number: number;
+  title: string;
+}
+
+// API response for a single chapter (superset of ChapterData)
+export interface ChapterResponse extends ChapterData {
+  prev: ChapterNavItem | null;
+  next: ChapterNavItem | null;
+}
+
 // Simulator result
 export interface SimResult {
   output: string;
