@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kubepath Tutorial",
+  title: "hefni·learn",
   description: "Interactive Kubernetes learning — YAML, kubectl, and beyond.",
 };
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-full bg-background text-foreground">
+        <AnalyticsProvider />
         <ThemeProvider>
           <div className="max-w-5xl mx-auto w-full min-h-full">
             {children}

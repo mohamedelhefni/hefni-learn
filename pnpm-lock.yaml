@@ -11,6 +11,9 @@ importers:
       '@base-ui/react':
         specifier: ^1.4.1
         version: 1.4.1(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@hefni101/siraaj':
+        specifier: ^1.0.0
+        version: 1.0.0(next@16.2.5(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -319,6 +322,32 @@ packages:
 
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
+
+  '@hefni101/siraaj@1.0.0':
+    resolution: {integrity: sha512-tzaH252VqimzPmv9ebLIHzw1GF0xzvCdpyxN1mLi57URCCjsp/i9qf7j6TL875C3N3n9DdTU99EAufOY8ty8wg==}
+    peerDependencies:
+      next: '>=13.0.0'
+      nuxt: '>=3.0.0'
+      preact: '>=10.0.0'
+      react: '>=16.8.0'
+      svelte: '>=3.0.0 || >=4.0.0 || >=5.0.0'
+      vue: '>=3.0.0'
+      vue-router: '>=4.0.0'
+    peerDependenciesMeta:
+      next:
+        optional: true
+      nuxt:
+        optional: true
+      preact:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@hono/node-server@1.19.14':
     resolution: {integrity: sha512-GwtvgtXxnWsucXvbQXkRgqksiH2Qed37H9xHZocE5sA3N8O8O8/8FA3uclQXxXVzc9XBZuEOMK7+r02FmSpHtw==}
@@ -3631,6 +3660,11 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
 
   '@floating-ui/utils@0.2.11': {}
+
+  '@hefni101/siraaj@1.0.0(next@16.2.5(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)':
+    optionalDependencies:
+      next: 16.2.5(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
 
   '@hono/node-server@1.19.14(hono@4.12.18)':
     dependencies:
