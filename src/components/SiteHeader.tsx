@@ -43,10 +43,10 @@ export function SiteHeader() {
         {/* Brand */}
         <div className="flex items-baseline gap-3 shrink-0">
           <h1 className="text-lg font-semibold tracking-tight">
-            <span style={{ color: "var(--primary)" }}>kube</span>path
+            <span style={{ color: "var(--primary)" }}>hefni</span>·learn
           </h1>
           <span className="text-xs text-muted-foreground font-mono hidden sm:inline">
-            interactive tutorial
+            interactive tutorials
           </span>
         </div>
 

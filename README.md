@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# hefni·learn
 
-## Getting Started
+Interactive Kubernetes learning — hands-on practice, broken manifests to debug, and quizzes that actually stick.
 
-First, run the development server:
+## What it is
+
+hefni·learn is a self-paced Kubernetes tutorial platform built with Next.js. Each chapter is structured around four activities:
+
+- **Concepts** — clear explanations of what you're learning and why
+- **Command Practice** — run `kubectl` commands in a simulated terminal
+- **Scenarios** — debug broken configurations with progressive hints
+- **Quiz** — multiple choice, true/false, YAML fill-in, and command challenges
+
+## Topics covered
+
+38 chapters spanning the full Kubernetes curriculum:
+
+- Kubernetes basics and cluster architecture
+- Pods, multi-container pods, and debugging
+- Labels, selectors, and annotations
+- Namespaces, deployments, scaling, and rollbacks
+- Services, Ingress, and network policies
+- ConfigMaps, Secrets, and resource management
+- ServiceAccounts, RBAC, security contexts, and admission control
+- Volumes, PersistentVolumes, and storage classes
+- Jobs, CronJobs, and deployment strategies
+- Helm, health probes, monitoring, logging
+- API deprecations and CRDs
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to start learning.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                  # Next.js app router pages
+├── components/           # UI and chapter components
+├── data/kubepath/        # 38 YAML lesson files
+└── lib/                  # Data loading and progress utilities
+```
 
-## Learn More
+Lesson content lives in `src/data/kubepath/` as YAML files. Each file defines a chapter's concepts, commands, scenarios, and quiz questions.
 
-To learn more about Next.js, take a look at the following resources:
+## Acknowledgements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Lesson content is derived from [nithin-nk/kubepath](https://github.com/nithin-nk/kubepath), which is an excellent open Kubernetes curriculum. Huge thanks to [@nithin-nk](https://github.com/nithin-nk) for putting it together and releasing it under Apache 2.0 — this project wouldn't exist without it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The original work is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See `LICENSE` for details.

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { listNamespaces, getAllChapters } from "@/lib/yaml-loader";
 import { SiteHeader } from "@/components/SiteHeader";
 
+
 function NamespaceCard({ namespace }: { namespace: string }) {
   const chapters = getAllChapters(namespace);
   const totalPoints = chapters.reduce((s, c) => s + c.totalPoints, 0);
@@ -44,11 +45,11 @@ export default function HomePage() {
       <div className="border-b border-border px-6 py-12">
         <div className="max-w-lg">
           <h2 className="text-3xl font-bold tracking-tight">
-            Learn by doing.
+            Learn by doing
           </h2>
           <p className="mt-3 text-muted-foreground leading-relaxed">
-            Hands-on practice, broken manifests to debug, and quizzes that stick.
-            Pick a topic to get started.
+            Hands-on practice, broken manifests to debug, and quizzes that actually stick.
+            Pick a topic and get to work.
           </p>
         </div>
       </div>
