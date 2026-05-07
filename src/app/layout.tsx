@@ -14,9 +14,60 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hefni-learn.vercel.app';
+
 export const metadata: Metadata = {
-  title: "hefni·learn",
-  description: "Interactive Kubernetes learning — YAML, kubectl, and beyond.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'hefni·learn',
+    template: '%s | hefni·learn',
+  },
+  description:
+    'Interactive Kubernetes learning — hands-on kubectl practice, YAML debugging, quizzes, and scenario challenges. 38 chapters covering pods, deployments, services, RBAC, Helm, and beyond.',
+  keywords: [
+    'kubernetes',
+    'kubectl',
+    'k8s',
+    'kubernetes tutorial',
+    'kubernetes learning',
+    'devops',
+    'containers',
+    'pods',
+    'helm',
+    'RBAC',
+    'kubernetes for beginners',
+  ],
+  authors: [{ name: 'hefni' }],
+  creator: 'hefni',
+  openGraph: {
+    type: 'website',
+    siteName: 'hefni·learn',
+    title: 'hefni·learn — Interactive Kubernetes Learning',
+    description:
+      'Hands-on kubectl practice, YAML debugging, quizzes, and scenario challenges. 38 chapters covering pods to Helm.',
+    locale: 'en_US',
+    url: '/',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'hefni·learn — Interactive Kubernetes Learning',
+    description:
+      'Hands-on kubectl practice, YAML debugging, quizzes, and scenario challenges. 38 chapters covering pods to Helm.',
+    creator: '@hefni101',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 // Runs before paint — reads localStorage/system pref and applies class to <html>
